@@ -62,8 +62,7 @@ valid = data.query("(Subject >= 21) & (Subject < 27)")
 n = input("Insert learning rate to be used (0.001-1.000): ")
 train_target = train["Activity"]
 train_data = train.ix[:, 1:-2]
-x,y=train_data.shape();
-mlp = MLPClassifier(activation='logistic',hidden_layer_sizes(x,100,100,6), learning_rate_init=n)
+mlp = MLPClassifier(activation='logistic',hidden_layer_sizes(561,100,100,6), learning_rate_init=n)
 mlp.fit(train_data, train_target)
 print("")
 
